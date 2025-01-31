@@ -9,7 +9,7 @@ export function Todos({todos}){
                 fetch("http://localhost:3000/completed", {
                 method: "PUT",
                 body: JSON.stringify({
-                    id:id
+                    id:todo._id
                 }),
                 headers: {
                     "Content-type": "application/json"
