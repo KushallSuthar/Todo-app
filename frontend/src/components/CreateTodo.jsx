@@ -16,7 +16,7 @@ export function CreateTodo(){
             margin :10
         }} type="text" placeholder="description" onChange={function(e){
             const value = e.target.value;
-            setTitle(e.target.value);
+            setDescription(e.target.value);
         }}></input> <br />
 
         <button style={{

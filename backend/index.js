@@ -30,7 +30,10 @@ app.post("/todo",async function(req,res){
 })
 
 app.get("/todos",async function(req,res){
-    const todos = await todo.findOne();
+    const todos = await todo.find();
+    res.json({
+        todos
+    })
 })
 
 app.put("/completed", async function(req,res){

@@ -3,10 +3,10 @@ export function Todos({todos}){
         {
             todos.map(function(todo){
                 return <div>
-                    <h1>{todos.title}</h1>
-                    <h2>{todos.description}</h2>
+                    <h1>{todo.title}</h1>
+                    <h2>{todo.description}</h2>
                     <button onClick={() => {
-            fetch("http://localhost:3000/completed", {
+                fetch("http://localhost:3000/completed", {
                 method: "PUT",
                 body: JSON.stringify({
                     id:id
@@ -19,7 +19,7 @@ export function Todos({todos}){
                 const json = await res.json();
 
             })
-        }}>{todo.completed == true ? "Completed" : "Mark as Complete"}</button>
+        } }>{todo.completed == true ? "Completed" : "Mark as Complete"}</button>
                 </div>
             })
         }
